@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Live</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Google Fonts ('Krona One', 'PT Sans Narrow') -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome Stylesheets -->
+    <script defer src="fontawesome/brands.js"></script>
+    <script defer src="fontawesome/fontawesome.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Weather Live</h1>
+    </header>
+    <form action="/" method="POST">
+        <input id="cityInput" type="text" name="cityName" placeholder="City name..." autocomplete="off">
+        <button id="submitBtn" type="submit">Search</button>
+    </form>
+    <p class="sentence"><%= date %> <%= city %></p>
+    <div id="weatherDiv">
+        <div id="details">
+            <div id="weatherIcon">
+                <img src="<%= iconURL %>" alt="weather-icon">
+                <p class="description"><%= description %></p>
+            </div>
+            <div id="weatherData">
+                <p class="data temperature">Temperature: <%= temp %>&#8451;</p>
+                <p class="data humidity">Humidity: <%= humidity %>%</p>
+                <p class="data wind">Wind speed: <%= wind %> km/h</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <a href="https://github.com/alenabauer" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/alenabauer/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <span>Alena Bauer 2021</span>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

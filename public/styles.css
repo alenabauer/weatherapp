@@ -6,6 +6,12 @@ body {
     background-size: cover;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: auto;
+    }
+}
+
 /* Header styling */
 
 header {
@@ -79,6 +85,8 @@ form {
     font-weight: 600;
 }
 
+/* Weather info styling */
+
 #weatherDiv {}
 
 #details {
@@ -124,6 +132,7 @@ form {
     font-size: 20px;
 }
 
+/* Footer styling */
 
 #footer {
     position: absolute;

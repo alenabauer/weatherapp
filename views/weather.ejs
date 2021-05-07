@@ -8,12 +8,6 @@
 
     <title>Weather Live</title>
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
     <!-- Google Fonts ('Krona One', 'PT Sans Narrow') -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
@@ -31,10 +25,10 @@
         <h1>Weather Live</h1>
     </header>
     <form action="/" method="POST">
-        <input id="cityInput" type="text" name="cityName" placeholder="City name..." autocomplete="off">
+        <input id="cityInput" type="text" name="cityName" placeholder="City name..." autocomplete="off" autofocus>
         <button id="submitBtn" type="submit">Search</button>
     </form>
-    <p class="sentence"><%= date %> <%= city %></p>
+    <p class="sentence"><%= date %> &nbsp;&nbsp; <span style="text-transform: uppercase;"><%= city %></span></p>
     <div id="weatherDiv">
         <div id="details">
             <div id="weatherIcon">
